@@ -5,24 +5,28 @@
     <title></title>
   </head>
   <body>
-    <div name="pantalla">
-      <h1>Cifrado Cesar</h1>
-      <p1>xxxxxxxxxxxxxxxxxxxxxxxxxx</br>
-    xxxxxxxxxxxxxxxxxxxxxxxxxxx</br></p1>
-    <input type="button" name="" value="Comenzar" onclick="ingresar()">
+    <header name="pantalla">
+      <h1>Cesar Cipher</h1>
+      <p1></p1>
+    <input type="button" id="comenzar" value="Comenzar" onclick="ingresar()">
 
-    </div>
+    </header>
+
+    <main name="pantalla" style="display:none">
+      <form class="" action="index.html" method="post">
+        <label for="textoACifrar">Ingrese texto:</label>
+        <input  type="text" id="textoACifrar">
+        <label for="offset">Ingrese offset:</label>
+        <input  type="number" id="offset">
+        <input type="button" id="cifrar" value="Cifrar">
+        <input type="button" id="descifrar" value="Descifrar">
+      </form>
+
+    </main>
 
     <div name="pantalla" style="display:none">
-      <label for="textoACifrar">Ingrese texto:</label>
-      <input  type="text" id="textoACifrar">
-      <label for="offset">Ingrese offset:</label>
-      <input  type="number" id="offset">
-      <input type="button" id="cifrar" value="Cifrar">
       <p>el texto cifrado es  es <span id="AquiTextoCifrado"></span></p>
-    </div>
 
-    <div name="pantalla" style="display:none">
     </div>
     <script type="text/javascript" src="app.js">
 

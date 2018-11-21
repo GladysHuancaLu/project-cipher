@@ -8,25 +8,31 @@
     <header name="pantalla">
       <h1>Cesar Cipher</h1>
       <p1></p1>
-    <input type="button" id="comenzar" value="Comenzar" onclick="ingresar()">
+    <input type="button" id="comenzar" value="Comenzar">
 
     </header>
 
     <main name="pantalla" style="display:none">
       <form class="" action="index.html" method="post">
         <label for="textoACifrar">Ingrese texto:</label>
-        <input  type="text" id="textoACifrar">
+        <div>
+          <textarea id="textoACifrar" rows="8" cols="80"></textarea>
+        </div>
         <label for="offset">Ingrese offset:</label>
+        <div>
         <input  type="number" id="offset">
+        </div>
+        <div>
         <input type="button" id="cifrar" value="Cifrar">
         <input type="button" id="descifrar" value="Descifrar">
+        </div>
       </form>
 
     </main>
 
     <div name="pantalla" style="display:none">
-      <p>el texto cifrado es  es <span id="AquiTextoCifrado"></span></p>
-
+      <textarea id="AquiTextoCifrado" rows="8" cols="80"></textarea>
+      
     </div>
     <script type="text/javascript" src="app.js">
 

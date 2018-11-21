@@ -6,7 +6,7 @@ const btnCifrar= document.getElementById("cifrar");
 const btnDescifrar= document.getElementById("descifrar");
 
 const cifrar = () => {
-  const offset = parseInt(document.getElementById("offset").value);
+  const offset = (parseInt(document.getElementById("offset").value))%26;
   const textoInicial= document.getElementById("textoACifrar").value;
   let textoFinal="";
   const textoMayuscula= textoInicial.toUpperCase();
@@ -22,7 +22,7 @@ return textoFinal;
 }
 
 const descifrar = () => {
-  const offset = parseInt(document.getElementById("offset").value);
+  const offset = (parseInt(document.getElementById("offset").value))%26;
   const textoInicial= document.getElementById("textoACifrar").value;
   let textoFinal="";
   const textoMayuscula= textoInicial.toUpperCase();
@@ -31,7 +31,7 @@ const descifrar = () => {
       textoFinal+=" ";
     }
     else{
-  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)-65-offset)%26+65);
+  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)+65-offset)%26+65);
 }}
 return textoFinal;
 

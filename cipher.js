@@ -1,4 +1,3 @@
-
 const comenzarResponse= document.getElementById("comenzar");
 
 const cifrarResponse= document.getElementById("AquiTextoCifrado");
@@ -11,11 +10,11 @@ const cifrar = () => {
   let textoFinal="";
   const textoMayuscula= textoInicial.toUpperCase();
   for(var i=0; i<textoMayuscula.length; i++){
-    if(textoMayuscula[i]==" "){
+    if(textoMayuscula[i]===" "){
       textoFinal+=" ";
     }
     else{
-  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)-65+offset)%26+65);
+  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)+65+offset)%26+65);
 }}
 return textoFinal;
 

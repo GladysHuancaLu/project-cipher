@@ -2,40 +2,48 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
     <title></title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header name="pantalla">
-      <h1>Cesar Cipher</h1>
-      <p1></p1>
-    <input type="button" id="comenzar" value="Comenzar">
+    <div class="contenedor">
+      <header name="pantalla">
+        <h1>Cesar Cipher</h1>
+        <p1></p1>
 
-    </header>
+      <input type="button" id="comenzar" value="Comenzar">
 
-    <main name="pantalla" style="display:none">
-      <form class="" action="index.html" method="post">
-        <label for="textoACifrar">Ingrese texto:</label>
-        <div>
-          <textarea id="textoACifrar" rows="8" cols="80"></textarea>
-        </div>
-        <label for="offset">Ingrese offset:</label>
-        <div>
-        <input  type="number" id="offset">
-        </div>
-        <div>
-        <input type="button" id="cifrar" value="Cifrar">
-        <input type="button" id="descifrar" value="Descifrar">
-        </div>
-      </form>
+      </header>
 
-    </main>
+      <main name="pantalla" style="">
+        <form class="formulario" action="index.html" method="post">
+          <div class="center">
+            <div class="">
+              <p>Ingrese texto:</p>
+              <textarea id="textoACifrar" class="styleTextArea" rows="6" cols="60"></textarea>
+            </div>
 
-    <div name="pantalla" style="display:none">
-      <textarea id="AquiTextoCifrado" rows="8" cols="80"></textarea>
-      
+            <div>
+              <label for="offset">Ingrese offset:</label>
+              <input  type="number" id="offset">
+              <input type="button" id="cifrar" value="Cifrar">
+              <input type="button" id="descifrar" value="Descifrar">
+            </div>
+          </div>
+
+          <div class="center" name="pantalla" style="">
+            <textarea id="AquiTextoCifrado" class="styleTextArea" rows="6" cols="60"></textarea>
+          </div>
+        </form>
+      </main>
+
+
+
+
+
     </div>
-    <script type="text/javascript" src="app.js">
-
+    <script type="text/javascript" src="cipher.js">
     </script>
   </body>
 </html>

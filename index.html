@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Cifrado-Cesar</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -12,35 +13,41 @@
         <h1>Cesar Cipher</h1>
         <p1></p1>
 
-      <input type="button" id="comenzar" value="Comenzar">
-
       </header>
+      <div class="lineaCentro">
+        <p>Cifra tu mesnaje</p>
+      </div>
 
-      <main name="pantalla" style="">
-        <form class="formulario" action="index.html" method="post">
-          <div class="center">
-            <div class="">
-              <p>Ingrese texto:</p>
-              <textarea id="textoACifrar" class="styleTextArea" rows="6" cols="60"></textarea>
+      <main name="pantalla" class="principal" style="">
+        <section id="section1">
+          <p>Convierte textos facil y rapido,<br> mueve cada letra un determinado número de desplazamiento <br>  los desplazamientos se dan hacia la derecha </p>
+            <br>
+            <br>
+            <br>
+
+          <input type="button" id="comenzar" value="Comenzar">
+
+        </section>
+        <section  id="section2">
+          <form class="formulario" action="index.html" method="post">
+            <div class="izquierda">
+                <textarea id="textoACifrar" placeholder="Ingrese texto" rows="12" cols="50"></textarea>
+              <div>
+                <label class="letraOffset" for="offset">Ingrese offset:</label>
+                <input  type="number" id="offset">
+                <input type="button" id="cifrar" value="Cifrar">
+                <input type="button" id="descifrar" value="Descifrar">
+              </div>
             </div>
 
-            <div>
-              <label for="offset">Ingrese offset:</label>
-              <input  type="number" id="offset">
-              <input type="button" id="cifrar" value="Cifrar">
-              <input type="button" id="descifrar" value="Descifrar">
+            <div class="derecha" name="pantalla" style="">
+              <textarea id="AquiTextoCifrado"  rows="12" cols="50"></textarea>
+              <input type="text" id="limpiar" value="Limpiar">
+              <input type="text" id="volver" value="Volver">
             </div>
-          </div>
-
-          <div class="center" name="pantalla" style="">
-            <textarea id="AquiTextoCifrado" class="styleTextArea" rows="6" cols="60"></textarea>
-          </div>
-        </form>
+          </form>
+        </section>
       </main>
-
-
-
-
 
     </div>
     <script type="text/javascript" src="cipher.js">

@@ -1,27 +1,154 @@
-body{
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.contenedor{
+
+}
+
+.lineaCentro{
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.principal{
+  background-color: #dbe4ff;
+  padding: 35px;
+  height:440px;
+  text-align: center;
+  box-sizing: border-box;
+}
+header{
   width: 100%;
+  height: 150px;
+  background-image: url(http://footage.framepool.com/shotimg/qf/372477707-tren-de-alta-velocidad-canon-eos-5d-tokio-ciudad-arquitectura-moderna.jpg);
+  color: #f8f9fa;
+  text-align: center;
+  letter-spacing: 3px;
+  font-style: oblique;
+   font-size: 40px;
+}
+#section1{
+  letter-spacing: 3px;
+}
+
+.lineaCentro{
+
+  background-color: #e9ecef;
+}
+
+#comenzar{
+  background: #3498db;
+  width: 120px;
+  padding: 4px 0;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 6px;
+
+   	font-family: 'Roboto';
+	  text-align: center;
+  	text-transform: uppercase;
+    color: #FFF;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+
+#section2{
+  display: none;
+  margin:auto;
+  margin-top: 20px;
+  width: 76%;
   height: 100%;
-  background-image: url( data:image/jpeg;base64,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);
-  background-size: cover;
-  background-attachment:fixed;
-  margin: 0;
-  padding: 0;
-}
-
-.contenedor {
-  margin: 0 auto;
-  width: 960px;
+    border: 1px solid black;
+  padding: 10px;
+  left: 50%;
 
 }
-
-.formulario {
-  padding-top: 20px;
-}
-.center {
-  float: left;
+.izquierda{
   width: 50%;
+  float: left;
+  display: inline;
+/*border: 1px solid black;*/
+}
+.derecha{
+  width: 50%;
+  /*width: 450px;
+  float: left;*/
+  float: left;
+  display: inline;
+  /*border: 1px solid black;*/
+
+}
+#textoACifrar , #AquiTextoCifrado{
+
+  border: 2px solid #adb5bd; /* Gris */
+  border-radius: 12px;
+  padding: 10px;
 }
 
-.center #AquiTextoCifrado {
-  margin-top: 50px;
+#offset{
+  width: 60px;
+  }
+
+
+#cifrar , #descifrar{
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 22px;
+  color: #fff;
+  text-transform: uppercase;
+    background: #3498db;
+    cursor: pointer;
+    font-family: 'Roboto';
+}
+#limpiar , #volver{
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 22px;
+  color: #fff;
+  text-transform: uppercase;
+    background: #ff922b;
+    cursor: pointer;
+    font-family: 'Roboto';
+  width: 100px;
+}
+
+ #descifrar:hover {
+  background-color: #6FC6FF;
+}
+#cifrar:hover {
+ background-color: #6FC6FF;
+}
+
+@media screen and (min-width:780px) and (max-width:1024px){
+
+ }
+
+@media screen and (min-width:480px) and (max-width:780px) {
+  header{
+    color: #6FC6FF;
+  }
+  .izquierda{
+    width: 100%;
+  }
+  .derecha{
+    width: 100%;
+    display: block;
+}
+
+}
+
+@media screen and (max-width:480){
+
 }

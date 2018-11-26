@@ -1,54 +1,68 @@
 const comenzarResponse= document.getElementById("comenzar");
+const limpiarResponse= document.getElementById("limpiar");
+const volverResponse= document.getElementById("volver");
 
 const cifrarResponse= document.getElementById("AquiTextoCifrado");
 const btnCifrar= document.getElementById("cifrar");
 const btnDescifrar= document.getElementById("descifrar");
+const textoInicial= document.getElementById("textoACifrar");
+const offset=document.getElementById("offset");
 
 const cifrar = () => {
-  const offset = (parseInt(document.getElementById("offset").value))%26;
-  const textoInicial= document.getElementById("textoACifrar").value;
+  const newOffset = (parseInt(offset.value))%26;
+  const textoInicialCifrar= textoInicial.value;
   let textoFinal="";
-  const textoMayuscula= textoInicial.toUpperCase();
+  const textoMayuscula= textoInicialCifrar.toUpperCase();
   for(var i=0; i<textoMayuscula.length; i++){
     if(textoMayuscula[i]===" "){
       textoFinal+=" ";
     }
     else{
-  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)+65+offset)%26+65);
+  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)+65+newOffset)%26+65);
 }}
 return textoFinal;
 
 }
 
 const descifrar = () => {
-  const offset = (parseInt(document.getElementById("offset").value))%26;
-  const textoInicial= document.getElementById("textoACifrar").value;
+  const newOffset = (parseInt(offset.value))%26;
+  const textoInicialDescifrar= textoInicial.value;
   let textoFinal="";
-  const textoMayuscula= textoInicial.toUpperCase();
+  const textoMayuscula= textoInicialDescifrar.toUpperCase();
   for(var i=0; i<textoMayuscula.length; i++){
     if(textoMayuscula[i]==" "){
       textoFinal+=" ";
     }
     else{
-  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)+65-offset)%26+65);
+  textoFinal+= String.fromCharCode((textoMayuscula.charCodeAt(i)+65-newOffset)%26+65);
 }}
 return textoFinal;
-
 }
 
 comenzarResponse.addEventListener("click", () =>{
-      document.getElementsByName("pantalla")[1].style.display='block';
+     document.getElementById("section2").style.display='block';
+     document.getElementById("section1").style.display='none';
 })
+
 btnCifrar.addEventListener("click" , () => {
-
-  document.getElementsByName("pantalla")[2].style.display='block';
-
-cifrarResponse.innerHTML = cifrar();
+cifrarResponse.value = cifrar();
 })
 
 btnDescifrar.addEventListener("click" , () => {
+cifrarResponse.value = descifrar();
+})
 
-  document.getElementsByName("pantalla")[2].style.display='block';
+limpiarResponse.addEventListener("click" , () => {
+textoInicial.value= "";
+cifrarResponse.value = "";
+offset.value="";
+})
 
-cifrarResponse.innerHTML = descifrar();
+volverResponse.addEventListener("click" , () => {
+textoInicial.value= "";
+cifrarResponse.value = "";
+offset.value="";
+document.getElementById("section2").style.display='none';
+document.getElementById("section1").style.display='block';
+
 })

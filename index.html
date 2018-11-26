@@ -20,8 +20,7 @@
 
       <main name="pantalla" class="principal" style="">
         <section id="section1">
-          <p>Convierte textos facil y rapido,<br> mueve cada letra un determinado número de desplazamiento <br>  los desplazamientos se dan hacia la derecha </p>
-            <br>
+          <p>Convierte textos facil y rapido,<br> con un determinado número de desplazamiento <br>  los desplazamientos se dan hacia la derecha </p>
             <br>
             <br>
 
@@ -30,20 +29,26 @@
         </section>
         <section  id="section2">
           <form class="formulario" action="index.html" method="post">
-            <div class="izquierda">
-                <textarea id="textoACifrar" placeholder="Ingrese texto" rows="12" cols="50"></textarea>
+            <div class="texto">
+              <textarea id="textoACifrar" class="textarea" placeholder="Ingrese texto"></textarea>
               <div>
                 <label class="letraOffset" for="offset">Ingrese offset:</label>
                 <input  type="number" id="offset">
+              </div>
+
+              <div>
                 <input type="button" id="cifrar" value="Cifrar">
                 <input type="button" id="descifrar" value="Descifrar">
               </div>
             </div>
 
-            <div class="derecha" name="pantalla" style="">
-              <textarea id="AquiTextoCifrado"  rows="12" cols="50"></textarea>
+            <div class="texto" name="pantalla">
+              <textarea id="AquiTextoCifrado" class="textarea"></textarea>
+            <div>
               <input type="text" id="limpiar" value="Limpiar">
               <input type="text" id="volver" value="Volver">
+            </div>
+
             </div>
           </form>
         </section>
